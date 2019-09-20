@@ -1,34 +1,78 @@
 :root {
   --primary-bg-color: #17c9c3;
   --secondary-bg-color: #f5f5f5;
-  --primary-text-color: #000000;
-  --secondary-text-color: hsl(0, 0%, 100%);
+
   --theme-text-color: #17c9c3;
+  --primary-text-color: #000000;
+  --secondary-text-color: #ffffff;
+
 }
 
-.text-white {
-  color: var(--secondary-text-color);
-}
+/* COMMON CSS  */
 
-.text-align {
-  text-align: center;
+.primary-bg {
+  background-color: var(--primary-bg-color);
 }
 
 .secondary-bg {
   background-color: var(--secondary-bg-color);
 }
 
-.primary-bg {
-  background-color: var(--primary-bg-color);
+.theme-text {
+  color: var(--theme-text-color);
 }
+
+.text-white {
+  color: var(--secondary-text-color);
+}
+
+.text-black {
+  color: var(--primary-text-color);
+}
+
+.text-align {
+  text-align: center;
+}
+
+p {
+  line-height: 26px;
+  letter-spacing: 1px;
+}
+
+.theme-btn {
+  background-color: var(--primary-bg-color);
+  color: var(--secondary-text-color);
+  padding: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.theme-btn a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.radius-none {
+  border-radius: 0;
+}
+
+
 
 html,
 body {
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
 }
 
+
+/* navigation css */
 .navbar {
   background-color: transparent;
   position: absolute;
@@ -39,9 +83,15 @@ body {
   font-weight: bold;
 }
 
-.nav-item:active {
-  color: var(--theme-text-color);
+.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show>.nav-link {
+  color: #17C9C3;
 }
+
+
+/* Banner Header */
 
 .banner {
   position: relative;
@@ -55,115 +105,147 @@ body {
 }
 
 .contentBox {
-  width: 26%;
-  position: absolute;
-  top: 45%;
-  left: 60%;
-}
-
-.contentBox p {
-  margin-top: 16px;
-  line-height: 26px;
-  letter-spacing: 1px;
-}
-
-.theme-btn {
-  background-color: var(--primary-bg-color);
-  color: var(--secondary-text-color);
-  padding: 15px;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-.theme-btn a {
-  text-decoration: none;
+  width: 50%;
 }
 
 .headerText {
   text-align: center;
-  margin: 15% 0 10% 0;
+  margin: 10%;
 }
 
 .skill-banner {
-  position: relative;
-  height: 50vh;
-  background: url("../image/ballpen-calendar-close-up-1558691.jpg");
+  background: url("../image/above-art-background-733852.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
 
-.sec2 {
-  background-color: var(--primary-bg-color);
+.skill-contentBox {
+  width: 50%;
 }
 
-.loadWork h6 {
-  text-align: center;
-  font-weight: bold;
-}
-.specialize {
-  text-align: center;
-  padding: 10px;
-}
-.form-control {
-  background-color: #fff;
-  border: none;
-}
-.btn-set {
-  justify-content: center;
-  display: flex;
+.grid-img {
+  height: 300px;
+  width: 100%;
 }
 
-.footer-section {
-  background-color: #141414;
-}
-.footer-wrap {
-  margin: 20px 0;
-}
-.about-company li {
-  list-style: none;
-}
-.about-company li a {
-  text-decoration: none;
-  color: var(--secondary-text-color);
-}
+
+
 .work-img div {
   background: #000;
 }
+
 .work-img div img {
   opacity: 1;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.8s ease-in-out;
 }
+
+
+
 .work-img div:hover img {
   opacity: 0.3;
+
 }
-.skill-content-box {
-  width: 26%;
-  position: absolute;
-  top: 20%;
-  left: 60%;
+
+
+.vlog {
+  padding-bottom: 5rem;
 }
+
+
+/* Skill content css */
 
 .skill-slide {
   width: 100%;
   height: 5px;
   background-color: #cecece;
 }
+
+.skill-contentBox {
+  padding: 5rem 0;
+}
+
 .design {
   width: 60%;
   height: 5px;
   background-color: #17c9c3;
 }
+
 .development {
   width: 80%;
   height: 5px;
   background-color: #17c9c3;
 }
+
 .marketing {
   width: 30%;
   height: 5px;
   background-color: #17c9c3;
 }
+
+
+
+
+
+.loadWork {
+  margin: auto;
+}
+
+.loadWork h6 {
+  text-align: center;
+  font-weight: bold;
+  margin: auto;
+  margin-bottom: 0;
+}
+
+.specialize {
+  text-align: center;
+  padding: 10px;
+}
+
+.specialize img {
+  margin: 20px;
+}
+
+.form-control {
+  background-color: #fff;
+  border: none;
+}
+
+.btn-set {
+  justify-content: center;
+  display: flex;
+}
+
+.child3 div {
+  float: right;
+}
+
+
+/* footer css */
+.footer-section {
+  background-color: #141414;
+}
+
+.footer-wrap {
+  margin: 20px 0;
+}
+
+.about-company li {
+  list-style: none;
+}
+
+.about-company li a {
+  text-decoration: none;
+  color: var(--secondary-text-color);
+}
+
+
+
+
+
+
 
 /* Swiper css */
 .swiper-container {
@@ -171,6 +253,7 @@ body {
   height: 100%;
   background-color: var(--primary-bg-color);
 }
+
 .swiper-slide {
   text-align: center;
   font-size: 18px;
@@ -188,10 +271,12 @@ body {
   align-items: center;
   height: 50vh;
 }
+
 .swiper-pagination-bullet-active {
   opacity: 1;
   background: #ffffff;
 }
+
 .swiper-pagination-bullet {
   width: 8px;
   height: 8px;
@@ -201,19 +286,29 @@ body {
   opacity: 0.9;
 }
 
-@media screen and (max-width: 768px) {
+
+
+
+
+
+
+
+
+
+/* RESPONSIVE  */
+
+@media screen and (max-width: 767px) {
+
   .contentBox {
-    position: absolute;
-    left: 0;
     width: 100%;
     text-align: center;
-    height: 100% !important;
-    top: auto;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
   }
+
+  .skill-contentBox {
+    padding: 3rem 0;
+    width: 100%;
+  }
+
   .skill-content-box {
     position: absolute;
     left: 0;
@@ -224,5 +319,22 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+  }
+
+  .grid-img {
+    height: 250px;
+    width: 100%;
+  }
+
+  .vlog {
+    padding-bottom: 3rem;
+  }
+
+  .child1 {
+    order: 1;
+  }
+
+  .child3 div {
+    float: left;
   }
 }
