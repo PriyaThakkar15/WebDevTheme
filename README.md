@@ -1,5 +1,5 @@
-# WebDevTheme
-responsive web devlopment theme website
+# Web Devlopment Theme
+Responsive Web Devlopment Theme Demo Website
 <html>
 <head>
 <body>
@@ -8,3 +8,4 @@ responsive web devlopment theme website
 </body>
 </head>
 </html>
+ 
